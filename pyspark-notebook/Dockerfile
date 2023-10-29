@@ -16,11 +16,11 @@ USER root
 # Spark dependencies
 # Default values can be overridden at build time
 # (ARGS are in lower case to distinguish them from ENV)
-ARG spark_version="3.5.0"
+ARG spark_version="3.4.1"
 ARG hadoop_version="3"
-ARG scala_version="2.13"
-ARG spark_checksum="b8ed2e5d2994493bd06aea4414057d6c92d8d01d2763626bb2a618d8c026990f155d6414ba0215cc593d991f762d30f55e0eaa1269c123d90f3a8f2cbd3f683c"
-ARG openjdk_version="17"
+ARG scala_version
+ARG spark_checksum="5a21295b4c3d1d3f8fc85375c711c7c23e3eeb3ec9ea91778f149d8d321e3905e2f44cf19c69a28df693cffd536f7316706c78932e7e148d224424150f18b2c5"
+ARG openjdk_version="8"
 
 ENV APACHE_SPARK_VERSION="${spark_version}" \
     HADOOP_VERSION="${hadoop_version}"
@@ -83,10 +83,13 @@ RUN mamba install --yes \
     'cython' \
     'dask' \
     'dill' \
+    'faker' \
+    'findspark'\
     'h5py' \
     'ipympl'\
     'ipywidgets' \
     'jupyterlab-git' \
+    'kafka-python' \
     'matplotlib-base' \
     'numba' \
     'numexpr' \
