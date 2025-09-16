@@ -6,7 +6,7 @@ from time import sleep
 
 
 topic_name = 'FirstTopic'
-producer = KafkaProducer(bootstrap_servers='broker_kafka:29092')
+producer = KafkaProducer(bootstrap_servers='localhost:9092')
 _instance = Faker()
 
 def produce():

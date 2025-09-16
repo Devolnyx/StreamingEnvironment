@@ -10,6 +10,7 @@ except Exception as e:
 # ------------------------------
 os.environ['KAFKA_TOPIC'] = "FirstTopic"
 os.environ['SERVER_END_POINT'] = "http://localhost:9200"
+os.environ['SERVER_END_POINT'] = "http://localhost:9092"
 # -----------------------------
 
 
